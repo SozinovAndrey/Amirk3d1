@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 const val TAG ="MainActivity"
-const val TAG_СРС5 ="srs5"
+const val TAG_СРС5 ="
  var   tec_stoka: String = ""
 val items1 = listOf("***Стихи про программиста***",
                     "Всем на свете это ясно",
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState != null) {
             i = savedInstanceState.getInt(TAG_СРС5)+3
             Log.d(TAG_СРС5,"ВСПОМИНАЕМ:----"+i)
+
 
         }
 
