@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Amirk3d_apk</string>
+    <string name="app_name">Мое первое приложение</string>
+    <string name="bye">До новых встреч!</string>
+    <string name="hello">Добрый день!</string>
+    <string name="_3">СРС3</string>
 </resources>
