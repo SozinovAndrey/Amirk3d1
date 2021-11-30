@@ -3,6 +3,7 @@ package com.example.amirk3d_apk
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,8 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-         userRV = findViewById(R.id.user_RecyclerView)
+        val userList:List<User> = listOf(
+            User("Ivan", 20),
+            User("Ivan", 20),
+            User("Ivan", 20),
+            User("Ivan", 20),
+        )
+
+        userRV = findViewById(R.id.user_RecyclerView)
         userRV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false )
+        userRV.adapter = UserAdapter(userList)
+        userRV.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL))
         }
 
 
@@ -45,15 +55,11 @@ class MainActivity : AppCompatActivity() {
         print_one_srting("onRestart")
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroy() {super.onDestroy()
         print_one_srting("onDestroy")
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-
-    }
+    override fun onSaveInstanceState(outState: Bundle) {super.onSaveInstanceState(outState)}
 
     fun print_one_srting(stroka:String){
         Log.d("TAG_СРС5", stroka)
