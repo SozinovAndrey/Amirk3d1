@@ -10,7 +10,7 @@ class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val ageTextView:TextView = itemView.findViewById(R.id.age_Text_View)
 
     fun bind(user: User){
-        nameTexView.text  ="Bvz - ${user.name}"
+        nameTexView.text  ="Имя - ${user.name}"
         ageTextView.text  ="Возраст -${user.age}"
 
         itemView.setOnClickListener{

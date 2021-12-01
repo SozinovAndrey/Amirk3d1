@@ -30,40 +30,40 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    override fun onStart() {
-        super.onStart()
-        print_one_srting("onStart")
-    }
+        override fun onStart() {
+            super.onStart()
+            print_one_srting("onStart")
+        }
 
-    override fun onResume() {
-        super.onResume()
-        print_one_srting("onResume")
-    }
+        override fun onResume() {
+            super.onResume()
+            print_one_srting("onResume")
+        }
 
-    override fun onPause() {
-        super.onPause()
-        print_one_srting("onPause")
-    }
+        override fun onPause() {
+            super.onPause()
+            print_one_srting("onPause")
+        }
 
-    override fun onStop() {
-        super.onStop()
-        print_one_srting("onStop")
-    }
+        override fun onStop() {
+            super.onStop()
+            print_one_srting("onStop")
+        }
 
-    override fun onRestart() {
-        super.onRestart()
-        print_one_srting("onRestart")
-    }
+        override fun onRestart() {
+            super.onRestart()
+            print_one_srting("onRestart")
+        }
 
-    override fun onDestroy() {super.onDestroy()
-        print_one_srting("onDestroy")
-    }
+        override fun onDestroy() {super.onDestroy()
+            print_one_srting("onDestroy")
+        }
 
-    override fun onSaveInstanceState(outState: Bundle) {super.onSaveInstanceState(outState)}
+        override fun onSaveInstanceState(outState: Bundle) {super.onSaveInstanceState(outState)}
 
-    fun print_one_srting(stroka:String){
-        Log.d("TAG_СРС5", stroka)
-    }
+        fun print_one_srting(stroka:String){
+            Log.d("TAG_СРС5", stroka)
+        }
 }
 
 //RecyclerView <- Adapter <- ViewHolder <- layout
