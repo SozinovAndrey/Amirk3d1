@@ -2,5 +2,9 @@
     <string name="app_name">Мое первое приложение</string>
     <string name="bye">До новых встреч!</string>
     <string name="hello">Добрый день!</string>
-    <string name="_3">СРС3</string>
+    <string name="b_1">Кнопка 1</string>
+    <string name="b_2">Кнопка 2</string>
+    <string name="b_3">Кнопка 3</string>
+    <string name="b_4">Кнопка 4</string>
+    <string name="b_5">Кнопка 5</string>
 </resources>

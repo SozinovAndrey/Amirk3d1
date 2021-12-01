@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTextStyle" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#114DB3</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textAppearanceLarge">@style/Theme.AppCompat</item>
+    </style>
+
+</resources>
