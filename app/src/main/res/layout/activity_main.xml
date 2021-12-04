@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textView"
+        style="@style/MyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ИМЯ"/>
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/MyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ФАМИЛИЯ"/>
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/MyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ОТЧЕСТВО"/>
+    <EditText
+        android:id="@+id/editText"
+        style="@style/MyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="укажите Имя"/>
+    <EditText
+        android:id="@+id/editText2"
+        style="@style/MyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="укажите Фамилию"/>
+    <EditText
+        android:id="@+id/editText3"
+        style="@style/MyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="укажите Отчество"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="вход"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="отмена"/>
+    <Button
+        android:id="@+id/button3"
+        style="@style/MyButtonStyle32_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="отмена" />
+</LinearLayout>
