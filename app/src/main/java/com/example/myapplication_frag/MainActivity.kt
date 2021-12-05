@@ -22,6 +22,14 @@ class MainActivity : AppCompatActivity() {
         actionBar?.title = "Вторая активность"
 
         frag = frag_logo()
+        if (savedInstanceState != null) {
+            frag = supportFragmentManager.findFragmentById(savedInstanceState.getInt("tek_frag"))
+
+        }
+
+      //  val  hv:String? = intent.extras?.getString(TAG_СРС6)
+      //  htv.text = hv
+
         replace_fragment(frag!!)
 
         navMenu = findViewById(R.id.navigation_menu)
@@ -45,23 +53,18 @@ class MainActivity : AppCompatActivity() {
                 if (key == true) {
                     replace_fragment(frag!!)
                 }
-
             true
         }
-        //replace_fragment(logoFragment)  // это на будущий проект
-
-      //  nextFragment.setOnClickListener{
-      //  val fragment =
-            //какой фрагмент у меня сейчас находится в контейнер под таким то R.id
-        //    when(supportFragmentManager.findFragmentById(R.id.my_fragment_view)) {
-             //   is Start_Fragment -> endFragment
-             //   is Stop_Fragment -> startFragment
-             //   else -> startFragment
-          //  }
-            //replace_fragment(fragment)
+     }
 
 
-        }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+
+        outState.putInt("tek_frag",R.id.fragment_view)
+
+    }
 
       fun replace_fragment(fragment: Fragment){
 
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity() {
            .commit()
     }
     }
+
 
 
 
