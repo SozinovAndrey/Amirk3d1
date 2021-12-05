@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/frag_1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_box_24"
+        android:hint="Добавить задачу"
+        />
+    <item
+        android:id="@+id/frag_browser"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_wb_cloudy_24"
+        android:hint="Открыть Браузер"
+        />
+
+    <item
+        android:id="@+id/frag_2"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_open_in_browser_24"
+        android:hint="frag_2"
+        />
+
+
+    <item
+        android:id="@+id/frag_3"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_notes_24"
+        android:hint="О нас"
+        />
+
+</menu>

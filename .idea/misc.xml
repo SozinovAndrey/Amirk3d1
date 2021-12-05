@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/activity_main.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/drawable/ic_launcher_background.xml" value="0.328125" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/activity_main.xml" value="0.2857142857142857" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_frag_1.xml" value="0.37907608695652173" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_frag_2.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_frag_3.xml" value="0.2857142857142857" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_frag_logo.xml" value="0.2857142857142857" />
         <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_srat_.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_start_.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/layout/fragment_stop_.xml" value="0.31197916666666664" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/MyApplication_Frag/app/src/main/res/menu/navigation_menu.xml" value="0.31197916666666664" />
       </map>
     </option>
   </component>

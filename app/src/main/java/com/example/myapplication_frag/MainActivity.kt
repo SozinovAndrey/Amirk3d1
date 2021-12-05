@@ -1,86 +1,81 @@
 package com.example.myapplication_frag
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-val TAG ="TAG"
+ var SrtingParam: String = "ГЛАВНАЯ АКТИВИТИ"
+ var myLogin: String = "Андрей"
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var nextFragment:Button
-
+    lateinit var navMenu: BottomNavigationView
+    var frag: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d(TAG,"MainActivity - onCreate")
-        nextFragment = findViewById(R.id.switch_button)
+        actionBar?.title = "Вторая активность"
 
-       // val logoFragment = Logo_Fragment() // это на будущий проект это будет Фрагмент приветсвтия
+        frag = frag_logo()
+        replace_fragment(frag!!)
 
-        val startFragment = Start_Fragment()
-        val endFragment = Stop_Fragment()
+        navMenu = findViewById(R.id.navigation_menu)
+        navMenu.setOnItemSelectedListener {item ->
 
+            var key: Boolean = false
 
+            when(item.itemId){
+               R.id.frag_1 ->{frag = frag_1()
+                   key = true}
+               R.id.frag_2 ->{frag = frag_2()
+                   key = true}
+               R.id.frag_browser ->{
+                   val weblink = Uri.parse("https://ya.ru")
+                   val olIntent = Intent(Intent.ACTION_VIEW,weblink)
+                   startActivity(olIntent)
+               }
+               R.id.frag_3 ->{frag = frag_3()
+                   key = true}
+            }
+                if (key == true) {
+                    replace_fragment(frag!!)
+                }
+
+            true
+        }
         //replace_fragment(logoFragment)  // это на будущий проект
 
-        nextFragment.setOnClickListener{
-        val fragment =
+      //  nextFragment.setOnClickListener{
+      //  val fragment =
             //какой фрагмент у меня сейчас находится в контейнер под таким то R.id
-            when(supportFragmentManager.findFragmentById(R.id.my_fragment_view)) {
-                is Start_Fragment -> endFragment
-                is Stop_Fragment -> startFragment
-                else -> startFragment
-            }
-
-            replace_fragment(fragment)
+        //    when(supportFragmentManager.findFragmentById(R.id.my_fragment_view)) {
+             //   is Start_Fragment -> endFragment
+             //   is Stop_Fragment -> startFragment
+             //   else -> startFragment
+          //  }
+            //replace_fragment(fragment)
 
 
         }
 
+      fun replace_fragment(fragment: Fragment){
 
+       supportFragmentManager
+          .beginTransaction()
+           .replace(R.id.fragment_view,fragment)
+           .addToBackStack(fragment.tag)
+           .commit()
     }
-
-    fun replace_fragment(fragment: Fragment){
-
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.my_fragment_view,fragment)
-            .addToBackStack(fragment.tag)
-            .commit()
-
-    }
-
-
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG,"MainActivity - onCreate")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG,"MainActivity - onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG,"MainActivity - onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG,"MainActivity - onStop")
     }
 
 
 
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG,"MainActivity - onDestroy")
-    }
 
-}
+
+
+
