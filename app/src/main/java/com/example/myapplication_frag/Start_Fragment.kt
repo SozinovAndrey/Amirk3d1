@@ -8,8 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 
-
+lateinit var show_toast: Button
 
 class Start_Fragment : Fragment() {
 
@@ -27,12 +28,17 @@ class Start_Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-      //  val view = inflater.inflate(R.layout.fragment_start_, container, false)
+        val view = inflater.inflate(R.layout.fragment_start_, container, false)
         Log.d(TAG,"Fragment - onCreateView")
-     return   inflater.inflate(R.layout.fragment_start_, container, false)
+
 
         //если нам нкжно работать с кнопкой то
       //  val  button: Button = view.findViewById(R.id.hi)
+        show_toast = view.findViewById(R.id.show_toast)
+        show_toast.setOnClickListener {
+            Toast.makeText(context, "Я СООБЩЕНИЕ", Toast.LENGTH_SHORT).show()
+        }
+        return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
