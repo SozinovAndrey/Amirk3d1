@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/main_item_orders"
+        android:enabled="true"
+        android:hint="Добавить задачу"
+        android:title="ЗАКАЗЫ" />
+    <item
+        android:id="@+id/main_item_browser"
+        android:enabled="true"
+        android:hint="Internet"
+        android:title="Internet"
+        />
+
+    <item
+        android:id="@+id/main_item_about"
+        android:enabled="true"
+        android:hint="О нас"
+        android:title="О нас"
+        />
+
+</menu>
