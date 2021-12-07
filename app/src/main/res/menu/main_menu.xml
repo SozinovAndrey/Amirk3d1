@@ -5,20 +5,30 @@
     <item
         android:id="@+id/main_item_orders"
         android:enabled="true"
-        android:hint="Добавить задачу"
-        android:title="ЗАКАЗЫ" />
+        android:icon="@drawable/menu"
+        android:hint="МЕНЮ"
+        android:title="" />
     <item
         android:id="@+id/main_item_browser"
         android:enabled="true"
+        android:icon="@drawable/internet"
         android:hint="Internet"
-        android:title="Internet"
+        android:title=""
         />
 
     <item
         android:id="@+id/main_item_about"
         android:enabled="true"
+        android:icon="@drawable/information_button"
         android:hint="О нас"
-        android:title="О нас"
+        android:title=""
+        />
+    <item
+        android:id="@+id/logoute"
+        android:enabled="true"
+        android:icon="@drawable/logout"
+        android:hint="Выйти"
+        android:title=""
         />
 
 </menu>

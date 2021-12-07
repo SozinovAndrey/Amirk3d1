@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.isVisible
@@ -14,11 +12,8 @@ import androidx.core.view.isVisible
 
 class FragLogo : Fragment() {
 
-    lateinit var imputText: EditText
-    lateinit var myLoginText: TextView
-    lateinit var enterButtonLogin: Button
-    lateinit var SaleImages: ImageView
-
+    lateinit var saleImages: ImageView
+    lateinit var nameUser: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,30 +22,18 @@ class FragLogo : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_frag_logo, container, false)
 
-        imputText = view.findViewById(R.id.input_login)
-        myLoginText = view.findViewById(R.id.myLogin)
-        enterButtonLogin = view.findViewById(R.id.button_login)
-        SaleImages = view.findViewById(R.id.imageView3)
 
-        enterButtonLogin.setOnClickListener {
+        saleImages = view.findViewById(R.id.imageView3)
+        nameUser = view.findViewById(R.id.myLogin)
 
-            myLogin = imputText.getText().toString()
-
-            imputText.getText().clear()
-            myLoginText.text = myLogin
-            login()
-        }
         return view
     }
 
     fun login() = if (myLogin != "") {
-        SaleImages.isVisible = true
-        enterButtonLogin.isVisible = false
-        imputText.isVisible = false
+        saleImages.isVisible = true
+        nameUser.text = "Добро пожаловать "+ myLogin
     } else {
-        SaleImages.isVisible = false
-        enterButtonLogin.isVisible = true
-        imputText.isVisible = true
+        saleImages.isVisible = false
     }
 
     override fun onResume() {

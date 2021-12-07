@@ -15,19 +15,28 @@ class OrdersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_orders)
+        actionBar?.title = myLogin + " Вы вошли в разедел - ПИЦЦА"
+        frag = Frag_Sushi()
 
         if (savedInstanceState != null) {
             frag = supportFragmentManager.findFragmentById(savedInstanceState.getInt("tek_frag"))
         }
+        replace_fragment(frag!!)
 
         navOrderMenu = findViewById(R.id.orders_navigation_menu)
         navOrderMenu.setOnItemSelectedListener { item ->
 
         var key: Boolean = false
         when (item.itemId) {
-            R.id.orders_menu -> {}
+
+            R.id.orders_menu_sushi -> {frag = Frag_Sushi()
+                key=true}
+
+            R.id.orders_menu_pizza -> {frag = Frag_Pizza()
+                key=true}
 
             R.id.order_cart -> {}
+
 
             R.id.order_go_main -> {
                 val secontActivityIntent = Intent(this, MainActivity::class.java)

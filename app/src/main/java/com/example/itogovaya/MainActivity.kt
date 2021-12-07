@@ -18,18 +18,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        if (myLogin == ""){login()}
+
+
            frag = FragLogo()
 
-        if (savedInstanceState != null) {
-            frag = supportFragmentManager.findFragmentById(savedInstanceState.getInt("tek_frag"))
-
-        }
+                if (savedInstanceState != null) {
+                    frag = supportFragmentManager.findFragmentById(savedInstanceState.getInt("tek_frag"))
+                }
 
         replace_fragment(frag!!)
 
         navMainMenu = findViewById(R.id.main_navigation_menu)
+        navMainMenu.setSelectedItemId(R.id.logoute)
         navMainMenu.setOnItemSelectedListener { item ->
-
             var key: Boolean = false
             when (item.itemId) {
                 R.id.main_item_orders -> {
@@ -45,6 +47,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(olIntent)
                 }
 
+                R.id.logoute -> {myLogin =""
+                    val LoginActivityIntent = Intent(this, LoginActivity::class.java)
+                    startActivity(LoginActivityIntent)
+                }
+
+
                 R.id.main_item_about -> {frag = frag_about()
                     key = true
                 }
@@ -53,8 +61,6 @@ class MainActivity : AppCompatActivity() {
             if (key) {
                 replace_fragment(frag!!)
             }
-
-
 
             true
         }
@@ -75,6 +81,11 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.main_fragment_view,fragment)
             .addToBackStack(fragment.tag)
             .commit()
+    }
+
+    fun login(){
+        val LoginActivityIntent = Intent(this, LoginActivity::class.java)
+        startActivity(LoginActivityIntent)
     }
 
 }

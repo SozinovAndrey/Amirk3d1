@@ -3,24 +3,35 @@
 
 
     <item
-        android:id="@+id/orders_menu"
+        android:id="@+id/orders_menu_sushi"
         android:enabled="true"
-        android:hint="Наше МЕНЮ "
-        android:title="Наше МЕНЮ" />
+        android:icon="@drawable/sushi"
+        android:hint="СУШИ/РОЛЛЫ"
+        android:title="" />
+
+    <item
+        android:id="@+id/orders_menu_pizza"
+        android:enabled="true"
+        android:icon="@drawable/pizza"
+        android:hint="Пицца"
+        android:title="" />
 
 
     <item
         android:id="@+id/order_cart"
         android:enabled="true"
+        android:icon="@drawable/shopping_cart"
         android:hint="Моя корзина"
-        android:title="Корзина"
+        android:title=""
         />
     <item
         android:id="@+id/order_go_main"
         android:enabled="true"
         android:hint="На ГЛАВНУЮ"
-        android:title="На ГЛАВНУЮ"
+        android:icon="@drawable/home"
+        android:title=""
         />
+
 
 
 </menu>
